@@ -5,17 +5,17 @@ import { usePathname } from "next/navigation";
 import { brand } from "@/lib/brand";
 
 const nav = [
-  { href: "/", label: "Home" },
-  { href: "/menu", label: "Menu" },
-  { href: "/reviews", label: "Reviews" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "Home", color: "bg-red-600 hover:bg-red-700" },
+  { href: "/menu", label: "Menu", color: "bg-green-600 hover:bg-green-700" },
+  { href: "/reviews", label: "Reviews", color: "bg-yellow-500 hover:bg-yellow-600" },
+  { href: "/contact", label: "Contact", color: "bg-teal-600 hover:bg-teal-700" },
 ];
 
 export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-30 border-b border-orange-200/60 bg-white/90 backdrop-blur dark:border-orange-900/40 dark:bg-neutral-950/90">
+    <header className="sticky top-0 z-30 bg-white/90 backdrop-blur dark:bg-neutral-950/90">
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link
           href="/"
@@ -27,7 +27,7 @@ export function Header() {
           >
             🌮
           </span>
-          <span className="text-red-900 dark:text-green-400">
+          <span className="text-red-800 dark:text-orange-300">
             {brand.name}
           </span>
         </Link>
@@ -43,8 +43,8 @@ export function Header() {
                 href={item.href}
                 className={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
                   active
-                    ? "bg-red-600 text-white"
-                    : "text-foreground/80 hover:bg-orange-50 dark:hover:bg-green-900/20"
+                    ? `${item.color} text-white`
+                    : "text-foreground/80 hover:bg-orange-50 dark:hover:bg-neutral-800"
                 }`}
               >
                 {item.label}
@@ -53,6 +53,7 @@ export function Header() {
           })}
         </nav>
       </div>
+      <div className="h-1 bg-gradient-to-r from-red-500 via-yellow-400 to-green-500" />
     </header>
   );
 }
