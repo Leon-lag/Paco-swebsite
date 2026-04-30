@@ -26,7 +26,7 @@ export default function ContactPage() {
         <div className="overflow-hidden rounded-2xl border-2 border-green-300/60 dark:border-green-800/40">
           <iframe
             title="Paco's Tacos of Ogden location"
-            src={`https://www.google.com/maps?q=${encodeURIComponent(brand.address)}&output=embed`}
+            src={brand.mapEmbedUrl}
             width="100%"
             height="400"
             style={{ border: 0 }}
