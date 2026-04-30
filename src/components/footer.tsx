@@ -37,14 +37,6 @@ export function Footer() {
           <Link href="/contact" className="hover:underline">
             Contact
           </Link>
-          <a
-            href={`https://${brand.website}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            {brand.website}
-          </a>
         </div>
         <div className="text-xs opacity-70">
           &copy; {brand.year} {brand.name}. All rights reserved.
