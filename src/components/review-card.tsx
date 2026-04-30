@@ -9,16 +9,16 @@ export function ReviewCard({ review }: { review: Review }) {
     .toUpperCase();
 
   return (
-    <div className="rounded-2xl border border-amber-200/60 bg-white p-6 dark:border-amber-900/40 dark:bg-neutral-900">
+    <div className="rounded-2xl border border-orange-200/60 bg-white p-6 dark:border-orange-900/40 dark:bg-neutral-900">
       <div className="flex items-start gap-3">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-100 text-sm font-bold text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-red-100 text-sm font-bold text-red-700 dark:bg-red-900/40 dark:text-red-300">
           {initials}
         </div>
         <div className="min-w-0">
           <p className="font-semibold">{review.author}</p>
           <p className="text-xs text-foreground/50">
             {review.badge && (
-              <span className="mr-1 text-amber-600 dark:text-amber-400">
+              <span className="mr-1 text-green-600 dark:text-green-400">
                 {review.badge} ·{" "}
               </span>
             )}

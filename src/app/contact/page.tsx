@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Contact & Location" };
 export default function ContactPage() {
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
-      <h1 className="text-3xl font-black tracking-tight sm:text-4xl text-amber-900 dark:text-amber-50">
+      <h1 className="text-3xl font-black tracking-tight sm:text-4xl text-red-900 dark:text-orange-50">
         Visit Us
       </h1>
       <p className="mt-3 max-w-2xl text-foreground/60">
@@ -16,7 +16,7 @@ export default function ContactPage() {
 
       <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
         {/* Map */}
-        <div className="overflow-hidden rounded-2xl border border-amber-200/60 dark:border-amber-900/40">
+        <div className="overflow-hidden rounded-2xl border border-orange-200/60 dark:border-orange-900/40">
           <iframe
             title="Paco's Tacos of Ogden location"
             src={`https://www.google.com/maps?q=${encodeURIComponent(brand.address)}&output=embed`}
@@ -51,7 +51,7 @@ export default function ContactPage() {
               href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(brand.address)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-600 hover:underline dark:text-amber-400"
+              className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-green-600 hover:underline dark:text-green-400"
             >
               Get Directions
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -70,7 +70,7 @@ export default function ContactPage() {
           >
             <a
               href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`}
-              className="text-lg font-semibold text-amber-600 hover:underline dark:text-amber-400"
+              className="text-lg font-semibold text-green-600 hover:underline dark:text-green-400"
             >
               {brand.phone}
             </a>
@@ -101,7 +101,7 @@ export default function ContactPage() {
               {brand.services.map((s) => (
                 <span
                   key={s}
-                  className="rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-700 dark:bg-amber-900/40 dark:text-amber-300"
+                  className="rounded-full bg-red-100 px-3 py-1 text-sm font-medium text-red-700 dark:bg-red-900/40 dark:text-red-300"
                 >
                   {s}
                 </span>
@@ -140,8 +140,8 @@ function Card({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-2xl border border-amber-200/60 p-5 dark:border-amber-900/40">
-      <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 mb-3">
+    <div className="rounded-2xl border border-orange-200/60 p-5 dark:border-orange-900/40">
+      <div className="flex items-center gap-2 text-red-600 dark:text-red-400 mb-3">
         {icon}
         <h2 className="font-semibold">{title}</h2>
       </div>

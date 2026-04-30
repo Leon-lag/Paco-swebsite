@@ -3,10 +3,10 @@ import { brand } from "@/lib/brand";
 
 export function Footer() {
   return (
-    <footer className="mt-24 border-t border-amber-200/60 bg-amber-50/50 py-10 text-sm text-foreground/70 dark:border-amber-900/40 dark:bg-neutral-900/50">
+    <footer className="mt-24 border-t border-orange-200/60 bg-orange-50/50 py-10 text-sm text-foreground/70 dark:border-orange-900/40 dark:bg-neutral-900/50">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-6 px-4 sm:flex-row sm:px-6">
         <div>
-          <div className="flex items-center gap-2 text-base font-black tracking-tight text-amber-900 dark:text-amber-400">
+          <div className="flex items-center gap-2 text-base font-black tracking-tight text-red-900 dark:text-green-400">
             <span
               aria-hidden
               className="inline-flex h-6 w-6 items-center justify-center text-lg"

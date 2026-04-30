@@ -11,7 +11,7 @@ export default function ReviewsPage() {
     <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="text-3xl font-black tracking-tight sm:text-4xl text-amber-900 dark:text-amber-50">
+          <h1 className="text-3xl font-black tracking-tight sm:text-4xl text-red-900 dark:text-orange-50">
             Customer Reviews
           </h1>
           <div className="mt-3 flex items-center gap-3">
@@ -27,7 +27,7 @@ export default function ReviewsPage() {
       </div>
 
       {/* Rating Distribution */}
-      <div className="mt-8 rounded-2xl border border-amber-200/60 p-6 dark:border-amber-900/40">
+      <div className="mt-8 rounded-2xl border border-orange-200/60 p-6 dark:border-orange-900/40">
         <h2 className="font-semibold mb-4">Rating Breakdown</h2>
         <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((stars) => {
@@ -40,7 +40,7 @@ export default function ReviewsPage() {
                 <StarRating rating={stars} size="sm" />
                 <div className="flex-1 h-2.5 rounded-full bg-gray-100 dark:bg-neutral-800 overflow-hidden">
                   <div
-                    className="h-full rounded-full bg-amber-400"
+                    className="h-full rounded-full bg-red-500"
                     style={{ width: `${pct}%` }}
                   />
                 </div>
@@ -58,7 +58,7 @@ export default function ReviewsPage() {
           {reviewHighlights.map((h) => (
             <span
               key={h}
-              className="rounded-full bg-amber-50 px-4 py-2 text-sm text-amber-800 dark:bg-amber-950/40 dark:text-amber-200"
+              className="rounded-full bg-orange-50 px-4 py-2 text-sm text-orange-800 dark:bg-orange-950/40 dark:text-orange-200"
             >
               &ldquo;{h}&rdquo;
             </span>
@@ -73,7 +73,7 @@ export default function ReviewsPage() {
           {popularTags.map((tag) => (
             <span
               key={tag.label}
-              className="inline-flex items-center gap-1.5 rounded-full border border-amber-300/60 px-3 py-1 text-sm dark:border-amber-800/60"
+              className="inline-flex items-center gap-1.5 rounded-full border border-orange-300/60 px-3 py-1 text-sm dark:border-orange-800/60"
             >
               {tag.label}
               <span className="text-xs text-foreground/40">{tag.count}</span>
@@ -89,8 +89,8 @@ export default function ReviewsPage() {
         ))}
       </div>
 
-      <div className="mt-10 rounded-2xl bg-amber-50/70 p-8 text-center dark:bg-amber-950/30">
-        <p className="text-lg font-semibold text-amber-800 dark:text-amber-200">
+      <div className="mt-10 rounded-2xl bg-green-50/70 p-8 text-center dark:bg-green-950/30">
+        <p className="text-lg font-semibold text-green-800 dark:text-green-200">
           Enjoying your experience?
         </p>
         <p className="mt-2 text-sm text-foreground/60">

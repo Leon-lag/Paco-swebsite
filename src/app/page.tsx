@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-amber-200/40 dark:border-amber-900/30">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(245,158,11,0.12),transparent_60%)]" />
+      <section className="relative overflow-hidden border-b border-orange-200/40 dark:border-orange-900/30">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(220,38,38,0.08),transparent_60%)]" />
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-20 sm:px-6 sm:py-28">
           <div className="flex flex-wrap items-center gap-3 text-sm text-foreground/60">
-            <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
+            <span className="rounded-full bg-red-100 px-3 py-1 text-xs font-semibold text-red-700 dark:bg-red-900/40 dark:text-red-300">
               Mexican Restaurant
             </span>
             <span>{brand.priceRange}</span>
@@ -26,7 +26,7 @@ export default function Home() {
               <span>({brand.reviewCount})</span>
             </span>
           </div>
-          <h1 className="max-w-3xl text-4xl font-black leading-[1.05] tracking-tight text-amber-900 sm:text-6xl dark:text-amber-50">
+          <h1 className="max-w-3xl text-4xl font-black leading-[1.05] tracking-tight text-red-900 sm:text-6xl dark:text-orange-50">
             {brand.name}
           </h1>
           <p className="max-w-xl text-base text-foreground/70 sm:text-lg">
@@ -37,7 +37,7 @@ export default function Home() {
             {brand.services.map((s) => (
               <span
                 key={s}
-                className="rounded-full border border-amber-300/60 px-3 py-1 dark:border-amber-800/60"
+                className="rounded-full border border-orange-300/60 px-3 py-1 dark:border-orange-800/60"
               >
                 {s}
               </span>
@@ -46,19 +46,19 @@ export default function Home() {
           <div className="flex flex-wrap gap-3 pt-2">
             <Link
               href="/menu"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-amber-500 px-7 text-sm font-semibold uppercase tracking-wider text-white hover:bg-amber-600 transition-colors"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-red-600 px-7 text-sm font-semibold uppercase tracking-wider text-white hover:bg-red-700 transition-colors"
             >
               View Menu
             </Link>
             <Link
               href="/contact"
-              className="inline-flex h-12 items-center justify-center rounded-full border border-amber-400/40 px-7 text-sm font-semibold uppercase tracking-wider hover:bg-amber-50 dark:border-amber-700/40 dark:hover:bg-amber-900/20 transition-colors"
+              className="inline-flex h-12 items-center justify-center rounded-full border border-green-600/40 px-7 text-sm font-semibold uppercase tracking-wider text-green-800 hover:bg-green-50 dark:border-green-500/40 dark:text-green-300 dark:hover:bg-green-900/20 transition-colors"
             >
               Get Directions
             </Link>
             <a
               href={`tel:${brand.phone.replace(/[^\d+]/g, "")}`}
-              className="inline-flex h-12 items-center justify-center rounded-full border border-amber-400/40 px-7 text-sm font-semibold uppercase tracking-wider hover:bg-amber-50 dark:border-amber-700/40 dark:hover:bg-amber-900/20 transition-colors"
+              className="inline-flex h-12 items-center justify-center rounded-full border border-green-600/40 px-7 text-sm font-semibold uppercase tracking-wider text-green-800 hover:bg-green-50 dark:border-green-500/40 dark:text-green-300 dark:hover:bg-green-900/20 transition-colors"
             >
               Call Us
             </a>
@@ -108,7 +108,7 @@ export default function Home() {
           </h2>
           <Link
             href="/menu"
-            className="text-sm font-semibold uppercase tracking-wider text-amber-600 hover:underline dark:text-amber-400"
+            className="text-sm font-semibold uppercase tracking-wider text-green-700 hover:underline dark:text-green-400"
           >
             Full menu &rarr;
           </Link>
@@ -117,9 +117,9 @@ export default function Home() {
           {menuCategories.slice(0, 3).map((category) => (
             <div
               key={category.name}
-              className="rounded-2xl border border-amber-200/60 p-5 dark:border-amber-900/40"
+              className="rounded-2xl border border-orange-200/60 p-5 dark:border-orange-900/40"
             >
-              <h3 className="text-lg font-bold text-amber-700 dark:text-amber-400">
+              <h3 className="text-lg font-bold text-green-700 dark:text-green-400">
                 {category.name}
               </h3>
               <ul className="mt-3 space-y-2">
@@ -154,7 +154,7 @@ export default function Home() {
           </div>
           <Link
             href="/reviews"
-            className="text-sm font-semibold uppercase tracking-wider text-amber-600 hover:underline dark:text-amber-400"
+            className="text-sm font-semibold uppercase tracking-wider text-green-700 hover:underline dark:text-green-400"
           >
             All reviews &rarr;
           </Link>
@@ -164,7 +164,7 @@ export default function Home() {
           {reviewHighlights.map((h) => (
             <span
               key={h}
-              className="rounded-full bg-amber-50 px-4 py-2 text-sm text-amber-800 dark:bg-amber-950/40 dark:text-amber-200"
+              className="rounded-full bg-orange-50 px-4 py-2 text-sm text-orange-800 dark:bg-orange-950/40 dark:text-orange-200"
             >
               &ldquo;{h}&rdquo;
             </span>
@@ -191,8 +191,8 @@ function InfoCard({
   body: string;
 }) {
   return (
-    <div className="flex items-start gap-4 rounded-2xl border border-amber-200/60 p-5 dark:border-amber-900/40">
-      <div className="text-amber-500">{icon}</div>
+    <div className="flex items-start gap-4 rounded-2xl border border-orange-200/60 p-5 dark:border-orange-900/40">
+      <div className="text-red-600">{icon}</div>
       <div>
         <h3 className="text-base font-semibold">{title}</h3>
         <p className="mt-1 text-sm text-foreground/70">{body}</p>
