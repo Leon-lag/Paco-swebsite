@@ -9,9 +9,9 @@ export function Footer() {
           <div className="flex items-center gap-2 text-base font-black tracking-tight text-amber-900 dark:text-amber-400">
             <span
               aria-hidden
-              className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-amber-500 text-white text-xs"
+              className="inline-flex h-6 w-6 items-center justify-center text-lg"
             >
-              P
+              🌮
             </span>
             {brand.name}
           </div>

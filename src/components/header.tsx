@@ -23,9 +23,9 @@ export function Header() {
         >
           <span
             aria-hidden
-            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-amber-500 text-white text-sm"
+            className="inline-flex h-8 w-8 items-center justify-center text-2xl"
           >
-            P
+            🌮
           </span>
           <span className="text-amber-900 dark:text-amber-400">
             {brand.name}
