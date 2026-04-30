@@ -3,6 +3,7 @@ import { brand } from "@/lib/brand";
 import { reviews, reviewHighlights, popularTags } from "@/lib/reviews";
 import { StarRating } from "@/components/star-rating";
 import { ReviewCard } from "@/components/review-card";
+import { LiveReviews } from "@/components/live-reviews";
 
 export const metadata: Metadata = { title: "Reviews" };
 
@@ -115,13 +116,13 @@ export default function ReviewsPage() {
         ))}
       </div>
 
-      <div className="mt-10 rounded-2xl bg-gradient-to-r from-red-50 via-yellow-50 to-green-50 p-8 text-center dark:from-red-950/30 dark:via-yellow-950/30 dark:to-green-950/30">
-        <p className="text-lg font-semibold text-red-800 dark:text-red-200">
-          Enjoying your experience?
-        </p>
-        <p className="mt-2 text-sm text-foreground/60">
-          We&apos;d love to hear from you! Leave us a review on Google.
-        </p>
+      {/* Live Reviews Section */}
+      <div className="mt-16 border-t-2 border-dashed border-orange-300/40 pt-12 dark:border-orange-800/40">
+        <h2 className="text-2xl font-bold mb-8">
+          <span className="text-yellow-600 dark:text-yellow-400">Community </span>
+          <span className="text-red-700 dark:text-red-400">Reviews</span>
+        </h2>
+        <LiveReviews />
       </div>
     </div>
   );
