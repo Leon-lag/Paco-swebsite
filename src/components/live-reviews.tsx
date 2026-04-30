@@ -96,6 +96,7 @@ export function LiveReviews() {
   const [text, setText] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [submitMsg, setSubmitMsg] = useState("");
+  const [submitError, setSubmitError] = useState(false);
 
   const fetchReviews = useCallback(async () => {
     try {
@@ -141,6 +142,7 @@ export function LiveReviews() {
     if (!author.trim() || !text.trim()) return;
     setSubmitting(true);
     setSubmitMsg("");
+    setSubmitError(false);
     try {
       const res = await fetch(`${API_URL}/reviews`, {
         method: "POST",
@@ -155,9 +157,11 @@ export function LiveReviews() {
         await fetchReviews();
         setTimeout(() => setSubmitMsg(""), 4000);
       } else {
+        setSubmitError(true);
         setSubmitMsg("Something went wrong. Please try again.");
       }
     } catch {
+      setSubmitError(true);
       setSubmitMsg("Network error. Please try again.");
     } finally {
       setSubmitting(false);
@@ -242,7 +246,7 @@ export function LiveReviews() {
               {submitting ? "Submitting..." : "Submit Review"}
             </button>
             {submitMsg && (
-              <p className="text-sm text-green-600 dark:text-green-400 font-medium">
+              <p className={`text-sm font-medium ${submitError ? "text-red-600 dark:text-red-400" : "text-green-600 dark:text-green-400"}`}>
                 {submitMsg}
               </p>
             )}
